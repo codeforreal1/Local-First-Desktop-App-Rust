@@ -15,9 +15,11 @@ function Root() {
 
   const handleSubmit = async (evt: React.FormEvent<HTMLFormElement>) => {
     evt.preventDefault()
+    const form = evt.currentTarget
     const formData = new FormData(evt.currentTarget)
     const name = formData.get('name') as string
     if (name?.length > 0) {
+      form.reset()
       await core.invoke('add_user', { name: formData.get('name') })
       await syncUsers()
     }
