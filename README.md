@@ -4,7 +4,7 @@
 
 - Next.js
 - Tauri
-- Sqlite with encryption enabled
+- Sqlite
 - SeaORM
 
 ### Building
